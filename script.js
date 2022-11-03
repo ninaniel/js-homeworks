@@ -88,27 +88,31 @@
 // // homework#2
 
 // 1
-let numbersS = [2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8];
-function positives() {    
-    for (let n=0; n<numbersS.length; n++) {
-        if (numbersS[n]>0) {
-            console.log (numbersS[n]);
+
+function positiveSum(...numbersS) {    
+    let positiveSum = 0;
+    for (let n of numbersS) {
+        if (n>0) {
+            positiveSum = positiveSum + n;
         }
     }
+    return positiveSum;
 }
-positives();
+let sum = positiveSum(2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8);
+console.log(sum);
 
-//2
-let array = [10, 50, 6, 7, 8, 11, 6, 3, 9]
-function arraySum(...array) {
-    let numSum = 0;
-    for (let i=0; i<array.length; i++) {
-        numSum = numSum + array[i];   
-    }
-    return numSum;
-}
-let result = arraySum(10, 50, 6, 7, 8, 11, 6, 3, 9);
-console.log(result);
+
+// 2
+// let array = [10, 50, 6, 7, 8, 11, 6, 3, 9]
+// function arraySum(...array) {
+//     let numSum = 0;
+//     for (let i=0; i<array.length; i++) {
+//         numSum = numSum + array[i];   
+//     }
+//     return numSum;
+// }
+// let result = arraySum(10, 50, 6, 7, 8, 11, 6, 3, 9);
+// console.log(result);
 
 //3
 let user = {
@@ -119,55 +123,78 @@ let user = {
   }
 
   function checkUser() {
-    if (user.isloggedin = true) {
-        return (user.firstname + " " + user.lastname);    
-    } else if (user.isloggedin = false) {
-        console.log (false);  
+    if (user.isloggedin == true)  {
+        // return (user.firstname + " " + user.lastname);  
+        return `${user.firstname} ${user.lastname}`;
+    } else  {
+        return false;  
     }
   }
   let result2 = checkUser();
   console.log (result2);
 
 //4
-let arRay = [45, 62, 148, 12, -14, 26, 84, 325, 11, 8, -7, 23];
-// function newFunction(arRay) {
-    for (let m =0; m<arRay.length; m++) {
-        if (arRay[m] > arRay[m--] || arRay[m] > arRay[m++]) {
-            console.log(arRay[m]);
+function newFunction(arRay) {
+    let max =0;
+    for (let m of arRay) {
+        if (m> max) {
+            max=m;
         }
     }
-    console.log(arRay[m]);
-
-// }
-
-//5
-let arrAy = [1,2,4,10,34,5,7,87];
-for (let i = 0; i<arrAy.length; i++) {
-    if (0<arrAy[i]<10) {
-        console.log(arrAy[i]);       
-    }
+    return max;
 }
+
+    let maxValue = newFunction([45, 62, 148, 12, -14, 26, 84, 325, 11, 8, -7, 23]);
+    console.log(maxValue);
+    // ან
+    //  function max(...numbers) {
+    //     console.log(Math.max(...numbers));
+    //  }
+    //      max(45, 62, 148, 12, -14, 26, 84, 325, 11);
+// 
+
+// //5
+function minusTen(...arrAy) {
+    for (let i of arrAy) {
+        if (i < 10) {
+            console.log(i);      
+        }
+    return i;
+    }
+
+}
+
+let resultA =  minusTen(1,2,4,10,34,5,7,87);
+console.log(resultA);
 
 //6
-let arraY =[1,2,3,4,5,6,7,8,9,10];
-for (let x=0; x<arraY.length; x++) {
-    if (x == 5) {
-        console.log(array[x]);
-        break;
-    }
-}
+// let arraY =[1,2,3,4,5,6,7,8,9,10];
+// for (let x=0; x<arraY.length; x++) {
+//     if (x == 5) {
+//         console.log(arraY[x]);
+//         break;
+//     }
+// }
 
-//7
+// //7
 let arrAay = ['html', 'css', 'python', 'javascript', 'bootstrap'];
 for (let y=0; y<arrAay.length; y++) {
-    if (y.length > 4 || y.includes('av')) {
-        console.log(y);
+    if (arrAay[y].length > 4 && arrAay[y].includes('av')) {
+        console.log(arrAay[y]);
     }
 }
-arrAay.forEach((item) => {
-    for (let item=0; item<arrAay.length; item++) 
-    if (item.length > 4 || item.includes('av')) {
-        console.log(item);
-    }
-    
-});
+//ან 
+// for (let y of arrAay) {
+//     if (y.length >4 && y.includes('av')){
+//         console.log(y);
+//     }
+// }
+
+
+// arrAay.forEach(function(item) {
+//     if (item.length > 4 && item.includes('av')) {
+//         console.log(item);
+//     }
+//    }
+// 
+
