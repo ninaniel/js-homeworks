@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working 9 </title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <form action="" id="registration" method="post">
+            <!-- method="post" გვჭირდება იმისათვის რომ ინფო ბრაუზერში დაიმალოს -->
+            <div>
+                <input type="text" name="username" id="usernamefield" placeholder="username..">
+                <span class="error-text" id="error-username"></span>
+            </div>
+            <div>
+                <input type="password" name="passw" id="passwordfield" placeholder="password..">
+                <span class="error-text" id="error-passw"></span>
+            </div>
+            <div>
+                <input type="password" name="passw2" id="passwordfield2" placeholder="repeat password..">
+                <span class="error-text" id="error-passw2"></span>
+            </div>
+
+            <div>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Female</label>
+                <span class="error-text" id="error-gender"></span>
+            </div>
+
+            <div>
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree">I agree terms and conditions</label>
+                <span class="error-text" id="error-agree"></span>
+            </div>
+            <button type="submit"> Submit </button>
+
+        </form>
+
+
+        <!-- show hide pass -->
+        <div class="password-field">
+            <input type="password" id="showpassword" name="password">
+            <i class="fa-solid fa-eye" id="eyeIcon"></i>
+
+        </div>
+
+        <div class="email-validation">
+            <input type="email" id="email" placeholder="email.." name="myemail"> 
+            <span id="emial-error"></span>
+
+        </div>
+
+
+
+    </section>
+    
+
+    
+</body>
+</html>
