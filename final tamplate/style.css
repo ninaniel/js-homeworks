@@ -1,0 +1,37 @@
+.vimeoVd {
+    border-radius: 10 px;
+    width: 700px;
+    height: 400px; 
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    position: absolute;
+
+}
+
+.vidiu {
+    opacity: 100%;
+    z-index: 5;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    text-decoration: none;
+    display: flex;
+    margin: 20px;
+    box-sizing: border-box;
+cursor:context-menu;
+}
+
+
